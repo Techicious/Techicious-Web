@@ -1,5 +1,5 @@
 import React from 'react'
-import Contact_form from '../components/Contact_form'
+import Contact_Form from '../components/Contact_form'
 
 const ContactUs = () => {
   window.scroll({
@@ -20,7 +20,7 @@ const ContactUs = () => {
 
          
         </div>
-        <Contact_form />
+        <Contact_Form />
       </div>
 
 
