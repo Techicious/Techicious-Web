@@ -33,5 +33,5 @@ jobs:
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDH9yuizfsUuP4MNEFbuKF8Uewdux22/RUIlI2tm6Dwj57GBawSZPzgODxy8PyV5E9BefyRB6F7GAXdZOfHCGjZ/NTCHzwnEZLHnZzWtrd4g0LYkcAd/LE1QXLXtC7O6jjJV9IQE/DvSjesdOlfNb3bn0ryw/Dycn001YquCfE0D0jXAdWh5CZkZiMCVdJtFaV7nYtMqucvpWtFJZlwTZUzzMxPn6Xk40tRUwIxLNBKtwdhjXIQB0mxBwEJc+Ad7TbwVuvzYeYEY4bMXXGsQHF3utJ99JP6bEIlhCXOzi8tyCqQUxTUWM1oATFOC5h9ZtXBTVSsNO7VYTukVWtzfUgmvLlz+bK/VIcdhIc4Z4Th8DGdSvo1R23LTeTjqgQ+Tl30xOv3IcdteOK0MhtRZ4aOmmCmYC/HYeO5tgWCd4JekG/Ztc7A1AMbKhEq/BqD60ZP1/PvudJSSqaY8UTR2GTLcXaUPwtSMV+T+Ima1ED3WDVqHu12gtGXmoDr0jFjV1ANOnbFBhupPuFO7AoXICtdaVZrNJA0ekq65eJ8yoSSjGXRX28qHCO8tRdEL8laLUV8uG6Gbq7qo1pMjo/DIhIYkZ2S1zfnr1iV3k4VvxIorQq7FoufjY3R10+1gT/dz5GjMYw5Tj+TVSN5XgwshB5/mawx/0Sig9FpgEb8pRMuUQ== uk481281@gmail.com
+          GITHUB_TOKEN: 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
           publish_dir: ./build  
