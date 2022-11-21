@@ -2,7 +2,7 @@ import React from 'react'
 import img1 from '../../resources/codefactory.png'
 
 
-const CodeFactory = () => {0.
+const CodeFactory = () => {
   window.scroll({
     top: 0, 
     left: 0, 
