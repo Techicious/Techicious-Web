@@ -33,5 +33,7 @@ jobs:
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          token: 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
+          github_token: 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
+          user_email: uk481281@gmail.com
+          user_name: Umesh Kumar
           publish_dir: ./build  
