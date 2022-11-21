@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.f358ec73.css",
-    "main.js": "/static/js/main.6c3de318.js",
-    "static/media/talentfactory.png": "/static/media/talentfactory.6fa2507bc5bcb505571b.png",
-    "static/media/converterfactory.png": "/static/media/converterfactory.f76d99d85813df7e544f.png",
-    "static/media/technology.png": "/static/media/technology.b590ebec197352af36be.png",
-    "static/media/contact.png": "/static/media/contact.345fadb88f641e94cc05.png",
-    "static/media/codefactory.png": "/static/media/codefactory.c21df0884d58336e569e.png",
-    "static/media/homepage-banner.png": "/static/media/homepage-banner.19f238e6b5a623cb57bb.png",
-    "static/media/pattern-png-30782.png": "/static/media/pattern-png-30782.d497fe3f32fb023a3886.png",
-    "static/media/about_us.png": "/static/media/about_us.f9006ffedea82a17a045.png",
-    "static/media/designfactory.png": "/static/media/designfactory.17a5e75ba537268e1ab3.png",
-    "static/media/iot.png": "/static/media/iot.e824d78ac92a24ce08a8.png",
-    "static/media/e.png": "/static/media/e.a018fda332e9710c2059.png",
-    "static/media/logo2.png": "/static/media/logo2.72346104702c398cf797.png",
-    "static/media/logo3.png": "/static/media/logo3.94d8ef59db7d6d75fc1d.png",
-    "static/media/logo.png": "/static/media/logo.861876a11fc6dfb10a08.png",
-    "index.html": "/index.html",
-    "main.f358ec73.css.map": "/static/css/main.f358ec73.css.map",
-    "main.6c3de318.js.map": "/static/js/main.6c3de318.js.map"
+    "main.css": "/Techicious-Web/static/css/main.f358ec73.css",
+    "main.js": "/Techicious-Web/static/js/main.8f7834f9.js",
+    "static/media/talentfactory.png": "/Techicious-Web/static/media/talentfactory.6fa2507bc5bcb505571b.png",
+    "static/media/converterfactory.png": "/Techicious-Web/static/media/converterfactory.f76d99d85813df7e544f.png",
+    "static/media/technology.png": "/Techicious-Web/static/media/technology.b590ebec197352af36be.png",
+    "static/media/contact.png": "/Techicious-Web/static/media/contact.345fadb88f641e94cc05.png",
+    "static/media/codefactory.png": "/Techicious-Web/static/media/codefactory.c21df0884d58336e569e.png",
+    "static/media/homepage-banner.png": "/Techicious-Web/static/media/homepage-banner.19f238e6b5a623cb57bb.png",
+    "static/media/pattern-png-30782.png": "/Techicious-Web/static/media/pattern-png-30782.d497fe3f32fb023a3886.png",
+    "static/media/about_us.png": "/Techicious-Web/static/media/about_us.f9006ffedea82a17a045.png",
+    "static/media/designfactory.png": "/Techicious-Web/static/media/designfactory.17a5e75ba537268e1ab3.png",
+    "static/media/iot.png": "/Techicious-Web/static/media/iot.e824d78ac92a24ce08a8.png",
+    "static/media/e.png": "/Techicious-Web/static/media/e.a018fda332e9710c2059.png",
+    "static/media/logo2.png": "/Techicious-Web/static/media/logo2.72346104702c398cf797.png",
+    "static/media/logo3.png": "/Techicious-Web/static/media/logo3.94d8ef59db7d6d75fc1d.png",
+    "static/media/logo.png": "/Techicious-Web/static/media/logo.861876a11fc6dfb10a08.png",
+    "index.html": "/Techicious-Web/index.html",
+    "main.f358ec73.css.map": "/Techicious-Web/static/css/main.f358ec73.css.map",
+    "main.8f7834f9.js.map": "/Techicious-Web/static/js/main.8f7834f9.js.map"
   },
   "entrypoints": [
     "static/css/main.f358ec73.css",
-    "static/js/main.6c3de318.js"
+    "static/js/main.8f7834f9.js"
   ]
 }
