@@ -1,0 +1,135 @@
+footer
+{
+    width: 100%;
+    background-color: var(--dark_bg);
+    padding: 40px;
+    box-sizing: border-box;
+ 
+
+}
+.footer_content
+{
+display: flex;
+flex-wrap: wrap;
+
+    box-sizing: border-box;
+    justify-content: center;
+align-items: center;
+
+}
+.footer_content .s
+{
+
+    overflow: hidden;
+    width: 350px;
+
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+    padding-left: 40px;
+    margin: 5px;
+}
+.left h1{
+    font-size: 1.3em;
+    color: var(--blue);
+    font-weight: 700;
+}
+.left ul{
+   padding: 10px;
+   padding-left: 20px;
+}
+.left ul li{
+    list-style: none;
+    margin: 5px 0px;
+    font-weight:400;
+    color: #fff;
+}
+.left ul li:hover{
+    color: var(--pink);
+    font-weight: 400;
+
+}
+.center img{
+    width: 400px;
+    transform: translate(-70px,-40px);
+}
+.center p{
+ color: var(--white);
+ font-weight: 400;
+}
+.right 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right h1
+{
+    font-size: 1.6em;
+    color: var(--blue);
+    font-weight: 700;
+  margin: 20px 0px;
+}
+.data_Section 
+{
+    color: #fff;
+}
+.data_Section  .p
+{
+    margin: 10px 0px;
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+.data_Section  .p i{
+    margin: 0 10px;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+   .s.left
+   {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   }
+   .s.center{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+   }
+   .center img{
+    width: 400px;
+    transform: translate(0px,0px);
+}
+   .s.right{
+    text-align: center;
+    width: 100%;
+   }
+}
+
+@media only screen and (max-width: 500px) 
+{
+    .center img{
+        width: 200px;
+    }
+
+    .data_Section  .p{
+     font-size: 14px;
+     display: flex;
+     flex-direction: column;
+     text-align:center;
+    }
+    footer{
+        padding: 10px;
+    }
+}

@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Content from "./Content";
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 function App() {
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+
+      var preloader = document.getElementById('loading');
+      var postloader = document.getElementById('afterloading');
+      preloader.style.display = 'none';
+      postloader.style.display = 'block';
+     
+    }, 5000);
+    return () => clearTimeout(timer);
+  },[]);
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+<div id="afterloading">
+<BrowserRouter>
+   <Content/>
+  </BrowserRouter>
+   </div>
+         
+   </>
   );
 }
 

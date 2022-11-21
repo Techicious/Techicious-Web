@@ -1,0 +1,154 @@
+.Title p{
+    width: 80%;
+    margin: 20px 0px;
+    color: var(--white);
+    line-height:25px;
+}
+.cardwrapper{
+    border: 2px solid var(--blue);
+    padding: 5px;
+    border-radius: 20px 0px 20px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.showcase{
+    width: 250px;
+   
+  margin:80px 20px;
+
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.showcard{
+    width: 250px;
+    min-height: 300px;
+    background-color: var(--dark_bg);
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px 0px 20px 0px;
+    overflow: hidden;
+    position: relative;
+
+}
+.showcard .heading{
+    width: 100%;
+ margin: 20px 0px;
+ color: var(--blue);
+ font-size: 1.2em;
+ text-transform: uppercase;
+
+}
+.showcard .text{
+    text-align: justify;
+    color: rgb(193, 192, 192);
+}
+
+.showcard::before{
+position: absolute;
+overflow: hidden;
+    content: '';
+    width: 150%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.437);
+filter: blur(20px);
+transform:translateY(370px) rotate(45deg);
+transition: .2s ease-in-out;
+}
+.cardwrapper:hover .showcard::before{
+    transform:translateY(-370px) rotate(45deg);
+}
+.icon{
+ 
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translateY(-40px);
+   z-index: 99900;
+}
+.hexagon {
+    top: 0;
+    
+    position: absolute;
+    
+    background-color: var(--blue);
+    border-radius: 10px;
+    width: 100px; 
+    height: 63px;
+    box-sizing: border-box;
+    transition: all 1s;
+    z-index: 9;
+    border: 0.4vh solid transparent;
+}
+  
+/* Creating pseudo-class */
+.hexagon:before, .hexagon:after {
+    content: "";
+    border: inherit;
+    position: absolute;
+    top: -0.5vh;
+    left: -0.5vh;
+    background-color: var(--blue);
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+}
+.hexagon:before {
+    transform: rotate(60deg);
+}
+.hexagon:after {
+    transform: rotate(-60deg);
+}
+.showcase_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    
+    
+}
+
+
+.showcasewrapper{
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+
+
+}
+
+
+
+
+.showcasewrapper h1{
+    margin: 60px 0px;
+    color: var(--blue);
+}
+@media only screen and (max-width: 400px) {
+  
+    .showcard{
+        width: 200px;
+        background-color: var(--dark_bg);
+        padding: 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px 0px 20px 0px;
+        overflow: hidden;
+        position: relative;
+    
+    }
+}

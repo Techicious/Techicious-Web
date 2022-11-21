@@ -1,0 +1,217 @@
+.wrapper{
+  
+  
+ position: absolute;
+ width: 200px;
+    padding: 10px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+.button{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    z-index: 3;
+    letter-spacing: 2px;
+    background-color: var(--bgcolor);
+    border: 3px solid var(--pink);
+    transition: .5s ease-in-out;
+    margin: 10px;
+    overflow: hidden;
+    border-radius:10px;
+    
+    
+    }
+    .button2,.button3{
+        position: absolute;
+        z-index: 1;
+       
+       color: transparent;
+        border: 3px solid #5ddbdb1d;
+        padding: 10px 20px;
+      
+        border-radius: 10px;
+        letter-spacing: 2px;
+        transition: .2s ease-in-out;
+       
+        
+    }
+    
+    .wrapper:hover .button{
+    
+    animation: animates .3s linear;
+    
+    }
+    
+    @keyframes animates{
+        0%{
+            font-size: .73em;
+        }
+        25%{
+            font-size: 1em;
+        }
+        50%{
+            font-size: .83em;
+        }
+        100%{
+            font-size: 1em;
+        }
+    }
+    
+    .button2{
+        
+        border-top: 0px solid var(--blue);
+      
+    }
+    .button3{
+      
+         border-bottom: 0px solid var(--blue);
+      
+    }
+    .wrapper:hover .button2{
+        transform: translate(5px,8px);
+        border: 3px solid var(--blue);
+        border-top: 0px solid var(--blue);
+      
+    }
+    .wrapper:hover .button3{
+        transform: translate(-5px,-8px);
+         border: 3px solid var(--blue);
+         border-bottom: 0px solid var(--blue);
+      
+    }
+    
+
+
+
+    /* ======================type2-====================== */
+    
+.wrappers{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.btnnew{
+    position: relative;
+    margin: 40px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.buttons{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    z-index: 3;
+    letter-spacing: 2px;
+    background-color: var(--bgcolor);
+    border: 3px solid var(--pink);
+    transition: .5s ease-in-out;
+    margin: 10px;
+    overflow: hidden;
+    border-radius:10px;
+    
+    
+    }
+    .buttons2,.buttons3{
+        position: absolute;
+        z-index: 1;
+       
+       color: transparent;
+        border: 3px solid var(--blue);
+        padding: 10px 20px;
+      
+        border-radius: 10px;
+        letter-spacing: 2px;
+        transition: .2s ease-in-out;
+       
+        
+    }
+  
+    
+    .buttons2{
+        transform: translate(-5px,-5px);
+      
+    }
+    .buttons3{
+      
+    transform: translate(5px,5px);
+      
+    }
+ 
+.button_type3{
+    width: 100%;
+}
+.button_type3 .wrapper{
+   color: var(--white);
+   position: relative;
+}
+
+.button_type3 .wrapper .iconimg{
+    position: absolute;
+    left: 0;
+   z-index: 2;
+    background-color: var(--blue);
+ transform: translateX(25px);
+    width: 40px;
+   border-radius: 40px;
+   transition: .4s ease-in-out;
+   padding: 5px
+}
+.button_type3 .wrapper .readmore a{
+    color: #fff;
+    z-index: 6;
+}
+.button_type3 .wrapper:hover .iconimg {
+  width: 140px;
+}
+.button_type3 .wrapper .iconimg svg{
+display: flex;
+justify-content: left;
+align-items: flex-start;
+    padding: 5px;
+    margin: 0;
+}
+.button_type3 .wrapper .iconimg svg path{
+    text-align: left;
+    color: #fff;
+}
+
+@media only screen and (max-width: 401px) 
+{
+.button,.button2,.button3{
+    font-size: 15px;
+    padding: 6px;
+}
+.buttons,.buttons2,.buttons3{
+    font-size: 12px;
+   
+}
+    
+    .button_type3 .wrapper .iconimg{
+      
+     transform: translateX(0px);
+        width: 40px;
+       border-radius: 40px;
+       transition: .4s ease-in-out;
+       padding: 5px
+    }
+}
+

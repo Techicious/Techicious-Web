@@ -1,13 +1,227 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* ================theme================= */
+img {
+  pointer-events: none
+} 
+:root
+{
+    --bgcolor:rgb(22, 7, 63);
+    --pink:#d2478f;
+    --blue:#1dabda;
+    --blue2:#922D50;
+    --dark_bg:#090319;
+    --white:#fff;
+    --textcolor: rgb(193, 192, 192);
+}
+
+/* light theme */
+:root:has(.light)
+{
+    --bgcolor:#d4ece5;
+    --pink:#ed0a71;
+    --blue:#033b59;
+    --blue2:#8D818C;
+    --dark_bg:#44bfa7;
+    --white:rgb(0, 0, 0);
+    --textcolor: rgb(68, 68, 68);
+
+
+}
+.mw{
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  margin-top: 100px;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bgcolor);
+}
+
+::selection{
+    background-color: rgb(225, 225, 225);
+    color: rgb(18, 18, 18);
+   
+}
+
+/* ============scrollbar=========== */
+::-webkit-scrollbar {
+    width: 10px;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(79, 79, 79); 
+  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(51, 51, 51); 
+  }
+/* 
+  .border{
+    
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  
+      
+    }
+  .border:hover{
+    
+  border-top: 5px solid var(--pink);
+  border-bottom: 5px solid var(--pink);
+
+    
+  } */
+.landingpage{
+    position: relative;
+    box-sizing: border-box;
+    background:url("../src/resources/download.png") repeat 0 0;
+   
+  
+    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 0.92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    padding-top: 30px;
+    animation-timing-function: linear;
+
+}
+#afterloading:has(.light) .landingpage{
+  position: relative;
+  box-sizing: border-box;
+  background:url("../src/resources/download2.png") repeat 0 0;
+  
+
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  padding-top: 30px;
+  animation-timing-function: linear;
+
+}
+
+
+/* ========================= */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: 50px 50px; }
+}
+
+/* =============preloader====================== */
+
+#loading
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+
+}
+svg{
+	font-weight: 700;
+	position: absolute; 
+	width: 100%; 
+  height: 100%;
+}
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #365fa0;
+	font-size: 140px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+	80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+	100% {
+		fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+
+/* ===========after Loading================ */
+#afterloading {
+  transition: .5s ease-in-out;
+
+  display: none;
+}
+
+/* Blank spot */
+.blankspot{
+  width: 100%;
+ /* height: 8vh; */
+}
+
+
+.iconimg svg
+{
+  width: 20px;
+  position: relative;
+  margin: 0px 20px;
+  overflow: hidden;
 }
