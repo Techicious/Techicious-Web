@@ -35,5 +35,5 @@ jobs:
         with:
           github_token: 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
           user_email: uk481281@gmail.com
-          user_name: Hon3y9718
+          user_name: "Umesh Kumar"
           publish_dir: ./build  
