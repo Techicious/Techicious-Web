@@ -46,7 +46,7 @@ const Content = () => {
        
        
           <Routes>
-      <Route exact path='/Techicious-Web' element={<Homepage/>}/>
+      <Route exact path='/' element={<Homepage/>}/>
       <Route exact path="/About_Us" element={<About/>} />
       <Route exact path="/Services/Design_Factory" element={<DesignFactory/>} />
       <Route exact path="/Services/Converter_Factory" element={<ConvertorFactory/>} />
