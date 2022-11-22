@@ -34,7 +34,7 @@ const Navbar = () => {
     </div>
     <div className="navbar">
 
-<Link to="/Techicious-Web">
+<Link to="/">
 
         <div className="logo">
             <img className="logo2" src={img1} alt="logo"/>
@@ -44,7 +44,7 @@ const Navbar = () => {
        
         <div className={`links${toggleClassCheck2}`} id="menu" onClick={handleclick}>
             <ul>
-                <li className='mainmenu'><Link to="/Techicious-Web"> Home </Link></li>
+                <li className='mainmenu'><Link to="/"> Home </Link></li>
             
                 
                 <li className='mainmenu'><Link to="/About_Us">About us </Link></li>
