@@ -14,21 +14,21 @@ function App() {
       var postloader = document.getElementById('afterloading');
       preloader.style.display = 'none';
       postloader.style.display = 'block';
-     
+
     }, 5000);
     return () => clearTimeout(timer);
-  },[]);
-  
+  }, []);
+
 
   return (
-   <>
-<div id="afterloading">
-<BrowserRouter>
-   <Content/>
-  </BrowserRouter>
-   </div>
-         
-   </>
+    <>
+      <div id="afterloading">
+        <BrowserRouter basename="/Techicious-Web">
+          <Content />
+        </BrowserRouter>
+      </div>
+
+    </>
   );
 }
 
