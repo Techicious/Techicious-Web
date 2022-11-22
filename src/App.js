@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       <div id="afterloading">
-        <BrowserRouter basename="">
+        <BrowserRouter basename="/Techicious-Web">
           <Content />
         </BrowserRouter>
       </div>
