@@ -4,7 +4,7 @@ import '../css/contact_form.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons'
 
-const Contact_form = () => {
+const Contact_Form = () => {
   return (
     <>
  
@@ -83,4 +83,4 @@ const Contact_form = () => {
   )
 }
 
-export default Contact_form
+export default Contact_Form
