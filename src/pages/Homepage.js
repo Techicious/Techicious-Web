@@ -9,6 +9,7 @@ import Sdata from '../components/Showcasedata'
 import Sdata2 from '../components/Imagedata'
 import Landinpage from '../components/Landinpage'
 import ShowcaseCard from '../components/Showcase_Card'
+import ClientParallax from '../components/ClientParallax'
 
 const Homepage = () => {
   window.scroll({
@@ -44,10 +45,11 @@ const Homepage = () => {
   return (
     <>
     <Landinpage />
+   
         <Intro/>
         <div className='showcasewrapper border'> 
         <div className='Title'>
-                        <span className='iconimg'><FontAwesomeIcon icon={faCog} /> </span>
+                       
                         <h1>WHERE WE CAN HELP </h1>
         </div>
         <div className='showcase_row info_help_row'>                  
@@ -56,7 +58,7 @@ const Homepage = () => {
         </div>
 
               <div className='showcasewrapper border' id='Services'> 
-              <div className='Title'>  <h1>What We Offer</h1>
+              <div className='Title bgl'>  <h1>What We Offer</h1>
               <p>We are here to help you in designing and building digital products and platforms with data and cloud as our primary points. For that, we have addressed the best cutting-edge technologies.</p>
               </div>
             

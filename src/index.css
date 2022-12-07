@@ -13,11 +13,12 @@ img {
 } 
 :root
 {
-    --bgcolor:rgb(22, 7, 63);
+    --bgcolor:#0e1012;
+    --bgcolorl:#161a1d;
     --pink:#d2478f;
     --blue:#1dabda;
     --blue2:#922D50;
-    --dark_bg:#090319;
+    --dark_bg: rgba(0, 0, 0, 0.808);
     --white:#fff;
     --textcolor: rgb(193, 192, 192);
 }
@@ -26,10 +27,12 @@ img {
 :root:has(.light)
 {
     --bgcolor:#d4ece5;
+    --bgcolorl:rgb(255, 255, 255);
+
     --pink:#ed0a71;
     --blue:#033b59;
     --blue2:#8D818C;
-    --dark_bg:#44bfa7;
+    --dark_bg:#ffffffc9;
     --white:rgb(0, 0, 0);
     --textcolor: rgb(68, 68, 68);
 
@@ -52,6 +55,8 @@ html
 
 body{
     background-color: var(--bgcolor);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 ::selection{
@@ -98,74 +103,20 @@ body{
   } */
 .landingpage{
     position: relative;
+    z-index: 4444;
     box-sizing: border-box;
-    background:url("../src/resources/download.png") repeat 0 0;
+
    
   
-    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Safari 4+ */
-    -moz-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Fx 5+ */
-    -o-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Opera 12+ */
-    animation: bg-scrolling-reverse 0.92s infinite;
-    /* IE 10+ */
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    padding-top: 30px;
-    animation-timing-function: linear;
 
 }
 #afterloading:has(.light) .landingpage{
   position: relative;
   box-sizing: border-box;
-  background:url("../src/resources/download2.png") repeat 0 0;
-  
-
-  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 0.92s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  padding-top: 30px;
-  animation-timing-function: linear;
+ 
 
 }
 
-
-/* ========================= */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% { background-position: 50px 50px; }
-}
-@-moz-keyframes    bg-scrolling-reverse {
-  100% { background-position: 50px 50px; }
-}
-@-o-keyframes      bg-scrolling-reverse {
-  100% { background-position: 50px 50px; }
-}
-@keyframes         bg-scrolling-reverse {
-  100% { background-position: 50px 50px; }
-}
-
-@-webkit-keyframes bg-scrolling {
-  0% { background-position: 50px 50px; }
-}
-@-moz-keyframes    bg-scrolling {
-  0% { background-position: 50px 50px; }
-}
-@-o-keyframes      bg-scrolling {
-  0% { background-position: 50px 50px; }
-}
-@keyframes         bg-scrolling {
-  0% { background-position: 50px 50px; }
-}
 
 /* =============preloader====================== */
 

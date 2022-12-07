@@ -48,7 +48,7 @@ const Navbar = () => {
             
                 
                 <li className='mainmenu'><Link to="/About_Us">About us </Link></li>
-                <li className='mainmenu'><Link>Services</Link>
+                <li className='mainmenu ic'><Link>Services</Link>
                 <ul className="submenu">
                     <li><Link to="/Services/Design_Factory">Design Factory</Link></li>
                     <li><Link to="/Services/Converter_Factory">Converter Factory</Link></li>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 
                 
                 </li>
-                <li className='mainmenu'><Link>Solutions</Link>
+                <li className='mainmenu ic'><Link>Solutions</Link>
                 <ul className="submenu">
                     <li><Link to="/Solutions/IOT_Solutions">IOT Solutions</Link></li>          
                    

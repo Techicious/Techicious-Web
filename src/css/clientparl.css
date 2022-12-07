@@ -1,0 +1,109 @@
+.pwrapper{
+  margin: 20px 0px;
+    overflow: hidden;
+}
+.parallax{
+    width: 100%;
+    height: 760vh;
+}
+.thisOne {
+
+  width: 100%;
+  position: relative;
+height: 100vh;
+opacity: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transition: .2s ease-in-out;
+  align-items: flex-end;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.thisOne .Heading
+{
+  position: absolute;
+}
+.thisOne img {
+ 
+  width: 300px;
+  height: 300px;
+}
+.contentparalax{
+  width: 100%;
+  height:100vh;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+.contentparalax .uppert{
+padding-right: 450px;
+
+  margin-bottom: 60px;
+}
+.contentparalax .lowert
+{
+  width: 100%;
+}
+.contentparalax .lowert{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentparalax .lowert img:first-of-type
+{
+  width: fit-content;
+  transition: .3s ease-in-out;
+
+}
+.contentparalax .lowert img:last-of-type
+{
+  transition: .3s ease-in-out;
+  scale: 1.4;
+  padding-left: 120px;
+  width: fit-content;
+}
+@media only screen and (max-width:1000px){
+  .contentparalax .uppert{
+    padding-right: 250px;
+    
+      margin-bottom: 60px;
+    }
+    .contentparalax .lowert img:first-of-type
+{
+ scale: .7;
+
+}
+.contentparalax .lowert img:last-of-type
+{
+  
+  scale: 1;
+
+}
+}
+@media only screen and (max-width:710px){
+  .contentparalax .uppert{
+    margin-top: 60px;
+    padding-right: 60px;
+    
+      margin-bottom: 60px;
+    }
+    .contentparalax .lowert img:first-of-type
+{
+ scale: .5;
+
+}
+.contentparalax .lowert img:last-of-type
+{
+  
+  scale: .6;
+margin-left: -170px;
+
+}
+}

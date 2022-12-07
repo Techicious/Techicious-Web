@@ -5,8 +5,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    border-radius: 15px;
     padding: 40px;
+    background-color: var(--bgcolorl);
 }
 .Title
 {
@@ -16,48 +18,38 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-.Title .iconimg svg
-{
-width: 50px;
-font-size: 2em;
 
-  padding-right: 0px;
 
-  margin: 2px;
-  animation: animate 3.2s linear infinite;
- 
-}
-@keyframes animate {
-  
-    100%{
-        transform: rotate(360deg);
-    }
-}
 .Title h1
 {
-    text-align: center;
-    margin: 40px 0px;
-    font-size: 5em;
+    text-align: left;
+    margin: 20px 0px;
+    font-size: 2em;
 }
 .Intro p{
     color: var(--textcolor);
     line-height: 30px;
     letter-spacing: 1px;
     padding: 20px;
-    text-align:center;
+    text-align:justify;
 }
 .Intro .btnnew{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.bgl{
+    background-color: var(--bgcolorl);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
 @media only screen and (max-width: 1000px) {
 .Title h1
 {
     text-align: center;
     
-    font-size: 3em;
+    font-size: 1.5em;
 }
 }
 
@@ -70,7 +62,8 @@ font-size: 2em;
 }
 .Title h1
 {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
     
     font-size: 1.5em;
 }

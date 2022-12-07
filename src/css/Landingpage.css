@@ -11,8 +11,8 @@ transform: translateY(219px);
     width: 50px;
     position: fixed;
     z-index: 99999999;
-    margin-top: 45px;
-    margin-right: 35px;
+    margin-top: 18px;
+    margin-right: 24px;
     right: 0;
     top: 0;
     padding: 5px;
@@ -104,7 +104,7 @@ overflow: hidden;
 .leftcontent {
     padding: 40px 0px;
     color: var(--white);
-    width: 40%;
+    width: 100%;
     animation: animatel .6s ease-in-out;
 }
 @keyframes animatel {
@@ -217,6 +217,11 @@ a {
     text-decoration: none;
     color: var(--white);
 }
+
+
+
+
+
 
 @media only screen and (max-width: 1200px) {
     .rightcontent img {
@@ -337,7 +342,7 @@ transform: translateX(10px);
     }
     .theme{
        
-        margin-top: 35px;
+        margin-top: 15px;
         margin-right: 35px;
         right: 0;
         top: 0;

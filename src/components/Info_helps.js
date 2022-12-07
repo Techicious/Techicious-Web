@@ -1,9 +1,8 @@
-import React from 'react'
 import '../css/info_help.css'
 
 
 const Info_helps = (props) => {
-  
+ 
 
   return (
     <>
