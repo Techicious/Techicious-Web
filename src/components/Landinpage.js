@@ -132,13 +132,13 @@ const Landinpage = () => {
             <div className="lowert">
               <img src={img2} alt="s"
               style={{
-                transform: scrollVal> 3000 && `translateX(${scrollVal * .20 -100}px)`
+                transform: scrollVal> 2300 && `translateX(${scrollVal * .45 - 800}px)`
                
               }}
               />
               <img src={img3}  alt="s" 
               style={{
-                transform: scrollVal> 2850 && `translateY(${-scrollVal * .15}px) `
+                transform: scrollVal> 2150 && `translateY(${-scrollVal * .15}px) `
               }}
               />
 
