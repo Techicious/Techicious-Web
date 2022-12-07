@@ -88,7 +88,7 @@ const Landinpage = () => {
         <div className="thisOne" id="fixed"
           style={{
             position: scrollVal > 800 && "fixed",
-            top: scrollVal < 4818 ? 0 : -scrollVal + 1000,
+            top: scrollVal < 4000 ? 0 : -scrollVal + 1000,
             background: scrollVal > 181 && '#fff',
             transition: '.4s ease-in-out',
             opacity: scrollVal > 181 && '1'
