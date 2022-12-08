@@ -18,7 +18,7 @@ img {
     --pink:#d2478f;
     --blue:#1dabda;
     --blue2:#922D50;
-    --dark_bg: rgba(0, 0, 0, 0.808);
+    --dark_bg: rgb(0, 0, 0);
     --white:#fff;
     --textcolor: rgb(193, 192, 192);
 }

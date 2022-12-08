@@ -15,6 +15,7 @@ import TalentFactory from './pages/Services/TalentFactory'
 import IOTSolutions from './pages/Solutions/IOTSolutions'
 import TechnologyPage from './pages/TechnologyPage'
 import ContactUs from './pages/ContactUs'
+import Newnavbar from './components/Newnavbar'
 
 
 
@@ -41,7 +42,8 @@ const Content = () => {
 <div className={`theme${thme}`} onClick={handleclick2}>
                     <div className="tgle"></div>
                 </div>
-    <Navbar/>
+    {/* <Navbar/> */}
+    <Newnavbar/>
         
        
        

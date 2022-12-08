@@ -10,11 +10,11 @@ transform: translateY(219px);
 .theme{
     width: 50px;
     position: fixed;
-    z-index: 99999999;
-    margin-top: 18px;
-    margin-right: 24px;
+    z-index: 99909;
+    margin-top: 8px;
+    margin-right: 0px;
     right: 0;
-    top: 0;
+    top: 150px;
     padding: 5px;
     border: 2px solid var(--white);
     border-radius: 25px;
