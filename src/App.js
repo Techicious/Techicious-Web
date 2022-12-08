@@ -15,7 +15,7 @@ function App() {
       preloader.style.display = 'none';
       postloader.style.display = 'block';
 
-    }, 100);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
