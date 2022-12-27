@@ -23,10 +23,8 @@ const Newnavbar = () => {
 
     function handleclick() {
         setCount(count => !count);
-     
     }
     function handleclick2() {
-       
         setCount2(count2 => !count2);
     }
     function handleclick3() {
@@ -60,7 +58,7 @@ const Newnavbar = () => {
                     <section className="menusection">
                         <div className="main_menue"><span><Link to="/"> Home </Link></span></div>
                         <div className="main_menue"><span><Link to="/About_Us">About us </Link></span></div>
-                        <div className={`main_menue${toggleClassCheck3}`} id="main_menue" onClick={handleclick2}><span>Services</span><div className='sub_menue'>
+                        <div className={`main_menue${toggleClassCheck3}`} id="main_menue" onClick={handleclick2}><span><a href="#"> Services</a></span><div className='sub_menue'>
                             <div className="menubox">
                                 <Link to="/Services/Design_Factory"><div className="liitemscards">
                                     <div className="image"><img src={df} alt="df" /></div>
@@ -86,7 +84,7 @@ const Newnavbar = () => {
                                 </Link>
                             </div>
                         </div></div>
-                        <div  className={`main_menue${toggleClassCheck4}`} id="main_menue" onClick={handleclick3}><span>Solutions </span>
+                        <div  className={`main_menue${toggleClassCheck4}`} id="main_menue" onClick={handleclick3}><span><a href="#"> Solutions </a> </span>
                         <div className="sub_menue">
                             <div className="menubox">
                             <Link to="/Solutions/IOT_Solutions"> <div className="liitemscards">

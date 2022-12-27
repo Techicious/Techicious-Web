@@ -10,11 +10,11 @@ transform: translateY(219px);
 .theme{
     width: 50px;
     position: fixed;
-    z-index: 99909;
+    z-index: 999999;
     margin-top: 8px;
     margin-right: 0px;
-    right: 0;
-    top: 150px;
+    right: 20px;
+    top: 20px;
     padding: 5px;
     border: 2px solid var(--white);
     border-radius: 25px;
@@ -328,6 +328,16 @@ transform: translateX(10px);
         }
     }
 
+}
+@media only screen and (max-width:867px){
+    .theme{
+      
+        left: 20px;
+        top: 20px;
+        padding: 5px;
+        border: 2px solid var(--white);
+        border-radius: 25px;
+    }
 }
 
 @media only screen and (max-width: 501px){
