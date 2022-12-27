@@ -8,9 +8,7 @@
 
 
 /* ================theme================= */
-img {
-  pointer-events: none
-} 
+
 :root
 {
     --bgcolor:#0e1012;
@@ -19,6 +17,14 @@ img {
     --blue:#1dabda;
     --blue2:#922D50;
     --dark_bg: rgb(0, 0, 0);
+    --transition:0s;
+    --scale:1;
+    --transformx:0px;
+--transformy:0px;
+--transformz:0x;
+--rotatex:0deg;
+--rotatey:0deg;
+--rotatez:0deg;
     --white:#fff;
     --textcolor: rgb(193, 192, 192);
 }
@@ -28,6 +34,7 @@ img {
 {
     --bgcolor:#d4ece5;
     --bgcolorl:rgb(255, 255, 255);
+
 
     --pink:#ed0a71;
     --blue:#033b59;

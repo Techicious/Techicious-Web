@@ -1,18 +1,19 @@
-import { useEffect, useState } from 'react'
+import  React, { useEffect, useState } from 'react'
 import '../css/Landingpage.css'
 import SliderComp from "./SliderComp"
+import Title from 'react-vanilla-tilt'
 
 import '../css/Button.css'
-import img1 from '../resources/homepage-banner.png'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
-import img2 from "../resources/sm.png"
-import img3 from "../resources/lr.png"
+
+
 
 
 const Landinpage = () => {
+
 
   const [scrollVal, setScrollVal] = useState(0);
 
@@ -27,8 +28,70 @@ const Landinpage = () => {
       document.removeEventListener("scroll", () => { });
     };
   }, []);
-  console.log(scrollVal);
 
+console.log(scrollVal)
+var r = document.querySelector(':root');
+{
+  if(scrollVal< 900){
+    r.style.setProperty('--rotatex', `${0}deg`);
+    r.style.setProperty('--rotatey', `${0}deg`);
+
+    r.style.setProperty('--transformx', `${0}px`);
+
+    r.style.setProperty('--scale', `${1}`);
+    r.style.setProperty('--transition', `${0.4}s`);
+
+
+
+  }
+  if(scrollVal>= 900){
+    r.style.setProperty('--rotatex', `${scrollVal/300 -2}deg`);
+    // r.style.setProperty('--transition', `${0}s`);
+
+    r.style.setProperty('--rotatey', `${-scrollVal/300 -2}deg`);
+
+    r.style.setProperty('--transformx', `${-scrollVal/5 +180}px`);
+    r.style.setProperty('--scale', `${.6 + scrollVal/2000}`);
+    
+
+  }
+  if(scrollVal>= 2400){
+    
+    r.style.setProperty('--transition', `${0.4}s`);
+
+    r.style.setProperty('--rotatex', `${5}deg`);
+    r.style.setProperty('--rotatey', `${-9.6}deg`);
+    r.style.setProperty('--transformx', `${-552}px`);
+
+    r.style.setProperty('--scale', `${2.2}`);
+  }
+  if(scrollVal>= 2780){
+    // r.style.setProperty('--transition', `${0.0}s`);
+
+    r.style.setProperty('--rotatex', `${5 - scrollVal/3000}deg`);
+    r.style.setProperty('--rotatey', `${-9.6 + scrollVal/1000}deg`);
+    r.style.setProperty('--transformx', `${scrollVal/5 - 1000}px`);
+    r.style.setProperty('--scale', `${ -scrollVal/3000 +3}`);
+
+
+  }
+  if(scrollVal >= 5300){
+    r.style.setProperty('--transition', `${0.4}s`);
+
+    r.style.setProperty('--rotatex', `${0}deg`);
+    r.style.setProperty('--rotatey', `${0}deg`);
+    r.style.setProperty('--scale', `${1}`);
+    r.style.setProperty('--transformx', `${0}px`);
+  }
+  if(scrollVal >= 5500){
+    // r.style.setProperty('--transition', `${0.0}s`);
+
+    r.style.setProperty('--rotatex', `${ scrollVal/2000}deg`);
+    r.style.setProperty('--scale', `${scrollVal/3000 - .7 }`);
+
+    
+  }
+}
 
   return (
 
@@ -44,7 +107,6 @@ const Landinpage = () => {
               <li><a href="https://www.facebook.com/" target="_blank" rel='noreferrer'><span className='iconimg'><FontAwesomeIcon icon={faTwitter} /> </span></a></li>
               <li><a href="https://www.facebook.com/" target="_blank" rel='noreferrer'><span className='iconimg'><FontAwesomeIcon icon={faLinkedin} /> </span></a></li>
               <li><a href="https://www.facebook.com/" target="_blank" rel='noreferrer'><span className='iconimg'><FontAwesomeIcon icon={faEnvelope} /> </span></a></li>
-
             </ul>
           </section>
 
@@ -55,28 +117,10 @@ const Landinpage = () => {
                 <h1>Innovative Solutions Focused on Your Success</h1>
                 <p><span className="space">INNOVATIVE. OPTIMIZE. AUTOMATE</span></p>
 
-                {/* <div className="btnnew">
-                <Link to="/About_Us">
 
-                  <div className="wrappers">
-                    <div className="buttons">
-                      <p>Read More</p>
-                    </div>
-                    <div className="buttons2">
-                      Read More
-                    </div>
-                    <div className="buttons3">
-                      Read More
-                    </div>
-                  </div>
-                </Link>
-
-              </div> */}
               </div>
 
-              {/* <div className="rightcontent">
-              <img src={img1} alt="banner" />
-            </div> */}
+
             </div>
 
           </div>
@@ -85,82 +129,35 @@ const Landinpage = () => {
         </section>
         {/* ------------Paralax effect----------- */}
 
-        <div className="thisOne" id="fixed"
+{/* for top scroll val of prev will be the postion scroll val of next one
+ for top incriment mini addition of 3030
+ limit value must be grater than 3030+
+ diffrence between starting val and main val should be 800 min to 840 max from prev one it will change to scaling animation
+*/}
+
+<div className="thisOne" id="fixed" 
           style={{
             position: scrollVal > 800 && "fixed",
-            top: scrollVal < 4000 ? 0 : -scrollVal + 1000,
-            background: scrollVal > 181 && '#fff',
+            top: scrollVal < 66000 ? 0 : -scrollVal + 1000,
+      
             transition: '.4s ease-in-out',
             opacity: scrollVal > 181 && '1'
           }}
         >
-          <div className="contentparalax" 
-          style={{
-            display: scrollVal > 2000 && 'none'
-           
-          }}>
-            <div className="uppert">
-              <h1>Navigation</h1>
-              <p>Mapbox provides powerful routing engines, accurate, traffic-powered travel times, and intuitive turn-by-turn directions to help you build engaging navigation experiences.</p>
-            </div>
-            <div className="lowert">
-              <img src={img2} alt="s"
-              style={{
-                transform: scrollVal > 1272 && `translateX(${scrollVal * .35}px)`
-               
-              }}
-              />
-              <img src={img3}  alt="s" 
-              style={{
-                transform: scrollVal > 960 && `translateY(${-scrollVal * .25}px) `
-              }}
-              />
 
+<Title className="titlehover">
 
-            </div>
-          </div>
+</Title>
 
-          <div className="contentparalax" 
-          style={{
-            display: scrollVal < 2030 && 'none'
-           
-          }}>
-            <div className="uppert">
-              <h1>new1</h1>
-              <p>Mapbox provides powerful routing engines, accurate, traffic-powered travel times, and intuitive turn-by-turn directions to help you build engaging navigation experiences.</p>
-            </div>
-            <div className="lowert">
-              <img src={img2} alt="s"
-              style={{
-                transform: scrollVal> 2300 && `translateX(${scrollVal * .45 - 800}px)`
-               
-              }}
-              />
-              <img src={img3}  alt="s" 
-              style={{
-                transform: scrollVal> 2150 && `translateY(${-scrollVal * .15}px) `
-              }}
-              />
+        
 
-
-            </div>
-          </div>
-          {/* <h1 className='Heading' style={{
-          transform: scrollVal < 1800 ? `scale(${scrollVal / 100})` : 'scale(0)'
-        }}>CASE1 </h1>
-        <img
-          src={
-            "https://www.svgrepo.com/show/429859/forest-landscape-mountain.svg"
-          }
-          style={{
-            transform: scrollVal < 2900 ? `translateX(${-scrollVal * .25 + 900}px) ` : `translateX(${-scrollVal * .25 + scrollVal * .34 }px)` 
-          }}
-
-        /> */}
         </div>
+
+
       </div>
     </>
   )
 }
 
 export default Landinpage
+
