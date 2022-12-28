@@ -18,10 +18,8 @@ opacity: 0;
   justify-content: center;
   padding: 20px;
   transition: .5s ease-in-out;
-  align-items: flex-end;
-
-  justify-content: center;
   align-items: center;
+
 }
 @keyframes gradient {
 	0% {
@@ -107,6 +105,8 @@ transition: .5s;
       margin-bottom: 60px;
     }
   }
+
+
 .titlehover 
 {
 
@@ -115,6 +115,7 @@ transition: .5s;
  padding: 0 !important;
  background-color: rgb(255, 255, 255) !important;
  margin: 0  !important;
+ margin-left: -150px  !important;
  transform: perspective(1000px) translateX(var(--transformx)) translateY(var(--transformy)) rotateX(var(--rotatex)) rotateY(var(--rotatey)) scale(var(--scale));
 
 transition: 0.4s ease;

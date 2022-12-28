@@ -1,11 +1,16 @@
 import '../css/clientparl.css'
+import Title from 'react-vanilla-tilt'
+
 const ClientParallax = () => {
-   
   return (
-    <div className='pwrapper'>
-    
-    
-    </div>
+    <>
+      
+        <Title className="titlehover">
+
+        </Title>
+     
+
+    </>
   )
 }
 
