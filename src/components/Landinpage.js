@@ -29,7 +29,6 @@ const Landinpage = () => {
     };
   }, []);
 
-  console.log(scrollVal)
   var r = document.querySelector(':root');
   {
     if (scrollVal < 900) {
@@ -45,8 +44,6 @@ const Landinpage = () => {
       r.style.setProperty('--rotatey', `${-scrollVal / 300 - 2}deg`);
       r.style.setProperty('--transformx', `${-scrollVal / 5 + 180}px`);
       r.style.setProperty('--scale', `${.6 + scrollVal / 2000}`);
-
-
     }
     // paused state
     if (scrollVal >= 2400) {
@@ -62,7 +59,6 @@ const Landinpage = () => {
       r.style.setProperty('--scale', `${-scrollVal / 3000 + 3}`);
     }
     // paused state
-
     if (scrollVal >= 5300) {
       r.style.setProperty('--rotatex', `${0}deg`);
       r.style.setProperty('--rotatey', `${0}deg`);
@@ -109,7 +105,9 @@ const Landinpage = () => {
           opacity: scrollVal > 181 && '1'
         }}
         >
-<ClientParallax/>
+<ClientParallax 
+scroll={scrollVal}
+/>
 </div>
 
 
