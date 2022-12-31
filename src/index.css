@@ -17,10 +17,11 @@
     --blue:#1dabda;
     --blue2:#922D50;
     --dark_bg: rgb(0, 0, 0);
-  
+  --transition:.1s ease;
     --scale:1;
     --transformx:0px;
 --transformy:0px;
+--scrollbarwidth:10px;
 --transformz:0x;
 --rotatex:0deg;
 --rotatey:0deg;
@@ -64,6 +65,7 @@ body{
     background-color: var(--bgcolor);
     width: 100%;
     overflow-x: hidden;
+
 }
 
 ::selection{
@@ -74,7 +76,9 @@ body{
 
 /* ============scrollbar=========== */
 ::-webkit-scrollbar {
-    width: 10px;
+
+    width: var(--scrollbarwidth);
+    transition: .4s ease-in-out;
    
   }
   
