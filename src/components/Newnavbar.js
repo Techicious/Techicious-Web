@@ -7,7 +7,7 @@ import df from '../resources/designfactory.png'
 import cf from '../resources/codefactory.png'
 import cvf from '../resources/converterfactory.png'
 import tf from '../resources/talentfactory.png'
-import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleDown, faArrowDown, faArrowDown19, faArrowDownAZ, faArrowPointer, faArrowUp, faShareNodes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -61,35 +61,37 @@ const Newnavbar = () => {
                         <div className={`main_menue${toggleClassCheck3}`} id="main_menue" onClick={handleclick2}><span><a href="#"> Services</a></span><div className='sub_menue'>
                             <div className="menubox">
                                 <Link to="/Services/Design_Factory"><div className="liitemscards">
-                                    <div className="image"><img src={df} alt="df" /></div>
+                                    {/* <div className="image"><img src={df} alt="df" /></div> */}
                                     <div className="title">Design Factory</div>
                                 </div></Link>
                                 <Link to="/Services/Converter_Factory">
                                 <div className="liitemscards">
-                                <div className="image"><img src={cf} alt="df" /></div>
+                                {/* <div className="image"><img src={cf} alt="df" /></div> */}
                                     <div className="title">Converter Factory</div>
                                 </div>
                                 </Link>
                                 <Link to="/Services/Code_Factory">
                                 <div className="liitemscards">
-                                <div className="image"><img src={cvf} alt="df" /></div>
+                                {/* <div className="image"><img src={cvf} alt="df" /></div> */}
                                     <div className="title">Code Factory</div>
                                 </div>
                                 </Link>
                                 <Link to="/Services/Talent_Factory">
                                 <div className="liitemscards">
-                                <div className="image"><img src={tf} alt="df" /></div>
+                                {/* <div className="image"><img src={tf} alt="df" /></div> */}
                                     <div className="title">Tallent Factory</div>
                                 </div>
                                 </Link>
                             </div>
                         </div></div>
-                        <div  className={`main_menue${toggleClassCheck4}`} id="main_menue" onClick={handleclick3}><span><a href="#"> Solutions </a> </span>
+                        <div  className={`main_menue${toggleClassCheck4}`} id="main_menue" onClick={handleclick3}><span><a href="#"> <p>Solutions</p>
+                        
+                            </a> </span>
                         <div className="sub_menue">
                             <div className="menubox">
                             <Link to="/Solutions/IOT_Solutions"> <div className="liitemscards">
-                                    <div className="image"><img src={df} alt="df" /></div>
-                                    <div className="title">IOT Solutions</div>
+                                    {/* <div className="image"><img src={df} alt="df" /></div> */}
+                                    <div className="title">IOT Solutions </div>
                                 </div></Link>
                             </div>
                             </div>

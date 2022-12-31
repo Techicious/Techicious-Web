@@ -16,7 +16,7 @@ nav{
 }
 a{
     text-decoration: none;
-    transition: .2 ease-in-out;
+
 }
 .menu{
     position: absolute;
@@ -53,7 +53,7 @@ a{
 /* ------------navbar----------- */
 
 nav .navbarn{
-    background-color: var( --dark_bg);
+    background-color: var( --bgcolor);
     width: 100%;
     padding: 5px;
     display: flex;
@@ -75,7 +75,7 @@ nav .navbarn .logosection img
 }
 .main_menue:hover > span a{
     color: var(--pink);
-    letter-spacing: 2px;
+   
 }
 .sub_menue {
     position: absolute;
@@ -91,9 +91,30 @@ nav .navbarn .logosection img
 }
 .main_menue span{
     display: flex;
-    width: fit-content;
+flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.main_menue span a{
+    width: 100%;
+  
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.main_menue:has(.sub_menue) span a::after{
+    transform: rotate(-90deg);
+scale: .6;
+    transition: .2s ease;
+    content: '\27A4';
+}
+.main_menue:hover span a::after
+{
+    transform: rotate(90deg);
+
+
 }
 
 .sm{
@@ -101,17 +122,18 @@ nav .navbarn .logosection img
 }
 
 .menubox{
-  width: 500px;
-
+ width: 100%;
+ padding: 20px 40px;
     display:flex;
-    flex-wrap: wrap;
+   flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: -40px;
     margin-top: 40px;
-   background-color: var(--dark_bg);
+   background-color: var(--bgcolorl);
    backdrop-filter: blur(10px);
 border-radius: 5px;
+
     z-index: 1;
 }
 .menubox::before{
@@ -119,7 +141,7 @@ border-radius: 5px;
     width: 20px;
     height: 20px;
     padding: 20px;
-    background-color: var(--dark_bg);
+    background-color: var(--bgcolorl);
     backdrop-filter: blur(4px);
     position: absolute;
     top: 0;
@@ -133,21 +155,18 @@ border-radius: 5px;
     width: 200px;
 
     border-radius: 5px;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     color: var(--white);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background-color: var(--bgcolorl);
+    background-color: var(--bgcolor);
     overflow: hidden;
-    transition: .3s ease;
+  
 }
 
-.menubox .liitemscards .image img{
-width: 100%;
-}
 .menubox .liitemscards:hover{
     scale: 1.1;
 
@@ -219,7 +238,7 @@ ul.followicons{
     display: none;
 }
     nav .navbarn{
-        background-color: var( --dark_bg);
+     
         width: 100%;
         padding: 5px;
         display: flex;

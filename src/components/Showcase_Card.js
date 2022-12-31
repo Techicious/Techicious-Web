@@ -26,7 +26,7 @@ id="hexagon">
               <div className='wrapper'>
               <div className='iconimg'><FontAwesomeIcon icon={faArrowAltCircleRight} /> </div>
               <div className='readmore'><Link to={`/Services/${props.link}`}> Readmore</Link></div>
-              </div>
+         </div>
          </div>
          
 
