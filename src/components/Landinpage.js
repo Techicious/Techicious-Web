@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import '../css/Landingpage.css'
-import SliderComp from "./SliderComp"
-import '../css/Button.css'
-import Social from './Social'
-import Landinginto from './Landinginto'
-import Clientcomponent from './Clientcomponent'
-
-
-
-
-
+import React, { useEffect, useState } from "react";
+import "../css/Landingpage.css";
+import SliderComp from "./SliderComp";
+import "../css/Button.css";
+import Social from "./Social";
+import Landinginto from "./Landinginto";
+import Clientcomponent from "./Clientcomponent";
 
 const Landinpage = () => {
-
-
   const [scrollVal, setScrollVal] = useState(0);
 
   useEffect(() => {
@@ -24,47 +17,39 @@ const Landinpage = () => {
     });
 
     return () => {
-      document.removeEventListener("scroll", () => { });
+      document.removeEventListener("scroll", () => {});
     };
   }, []);
   console.log(scrollVal);
 
-
-
   return (
-
     <>
-      <div className="parallax" id='parl'>
+      <div className="parallax" id="parl">
         <section className="landingpage">
           <Social />
           <Landinginto />
           <SliderComp />
         </section>
-        {
-          scrollVal < 8800 ? <Clientcomponent
+        {scrollVal < 5476 ? (
+          <Clientcomponent
             scroll={scrollVal}
             trigerval={181}
             startval={800}
-            endval={8800}
+            endval={5476}
             initval={0}
           />
-            : <Clientcomponent
-              scroll={scrollVal}
-              trigerval={8161}
-              startval={8820}
-              endval={17238}
-              initval={8800}
-            />
-        }
-
-
-
-
-
+        ) : (
+          <Clientcomponent
+            scroll={scrollVal}
+            trigerval={5476}
+            startval={5476}
+            endval={12550}
+            initval={4676}
+          />
+        )}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Landinpage
-
+export default Landinpage;
