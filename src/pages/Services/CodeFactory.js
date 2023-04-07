@@ -1,15 +1,14 @@
-import React from 'react'
-import img1 from '../../resources/codefactory.png'
-
+import React from "react";
+import img1 from "../../Assets/codefactory.png";
 
 const CodeFactory = () => {
   window.scroll({
-    top: 0, 
-    left: 0, 
-    behavior: 'smooth'
+    top: 0,
+    left: 0,
+    behavior: "smooth",
   });
   return (
-    <div className='mw'>
+    <div className="mw">
       <div className="pagemargin">
         <div className="aboutlanding">
           <div className="aboutlanding_left">
@@ -18,18 +17,24 @@ const CodeFactory = () => {
           <div className="aboutlanding_right">
             <div className="title">
               <h1>Code Factory</h1>
-
             </div>
             <div className="para">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt placeat unde architecto. Natus corporis optio minima atque accusamus, iusto error. Optio suscipit dolorum voluptatem. Quia facere officiis molestias praesentium recusandae et dolores quas omnis deserunt sit. Eos, officiis libero voluptas nesciunt maxime, impedit excepturi aliquid voluptatem incidunt error provident ab.</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nesciunt placeat unde architecto. Natus corporis optio minima
+                atque accusamus, iusto error. Optio suscipit dolorum voluptatem.
+                Quia facere officiis molestias praesentium recusandae et dolores
+                quas omnis deserunt sit. Eos, officiis libero voluptas nesciunt
+                maxime, impedit excepturi aliquid voluptatem incidunt error
+                provident ab.
+              </p>
             </div>
           </div>
-
         </div>
         <div className="aboutdetails"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CodeFactory
+export default CodeFactory;
