@@ -15,6 +15,7 @@
   --transformz: 0px;
   --rotatex: 0deg;
   --imagescrolly: 0;
+  --imagescrolly2: 0;
   --rotatey: 0deg;
   --rotatez: 0deg;
 }
@@ -142,7 +143,7 @@ html {
 }
 .parallax {
   width: 100%;
-  height: 2700vh;
+  height: 880rem;
 }
 .thisOne {
   background: linear-gradient(-45deg, #e74615, #c90e56, #019dd6, #04c46a);
@@ -216,15 +217,13 @@ html {
 }
 
 .titlehover {
-  width: 500px !important;
-  height: 360px !important;
-
-  padding: 20px 18px !important;
+  width: 320px !important;
+  height: 230px !important;
+  padding: 10px 12px !important;
   background: url("./Assets/tab.png") no-repeat !important;
   background-size: cover !important;
   margin: 0 !important;
-
-  border-radius: 20px !important;
+  border-radius: 13px !important;
   transform: perspective(1000px) translateX(var(--transformx))
     translateY(var(--transformy)) rotateX(var(--rotatex))
     rotateY(var(--rotatey)) scale(var(--scale));
@@ -237,13 +236,12 @@ html {
 }
 
 .titlehover2 {
-  width: 190px !important;
-  height: 380px !important;
+  width: 170px !important;
+  height: 340px !important;
   background: url("./Assets/mobile.png") no-repeat !important;
   background-size: cover !important;
   margin: 0 !important;
-  padding: 0px !important;
-
+  padding: 10px 8px !important;
   border-radius: 20px !important;
   transform: perspective(1000px) translateX(var(--transformx))
     translateY(var(--transformy)) rotateX(var(--rotatex))
@@ -256,19 +254,6 @@ html {
   pointer-events: none;
 }
 
-.tab {
-  width: 480px !important;
-  height: 330px !important;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.mobile {
-  width: 170px !important;
-  height: 358px !important;
-  overflow: hidden;
-  margin-left: 4px;
-  border-radius: 20px;
-}
 .innerbox {
   width: 100%;
   height: fit-content;
@@ -276,6 +261,15 @@ html {
   padding: 0;
   transform: translateY(var(--imagescrolly));
 }
+
+.innerbox2 {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  padding: 0;
+  transform: translateY(var(--imagescrolly2));
+}
+
 .innerbox img {
   width: 100%;
   height: 100%;

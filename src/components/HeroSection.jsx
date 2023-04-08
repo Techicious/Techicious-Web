@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SliderComp from "./ProjectShowcaseCard";
 import Landinginto from "./LandingPage";
 import { Box } from "@chakra-ui/react";
-import ShowcaseParalexCard from "./ShowcaseParalexCard";
+import ShowcaseParalexCards from "./ShowcaseParalexCard2";
 
 const Landinpage = () => {
   const [scrollVal, setScrollVal] = useState(0);
@@ -27,20 +27,14 @@ const Landinpage = () => {
           <SliderComp />
         </Box>
 
-        <ShowcaseParalexCard
+        <ShowcaseParalexCards
           scroll={scrollVal}
           trigerval={181}
           startval={800}
-          endval={7640}
+          endvalDesktop={7640}
+          startvalMobile={800}
+          endval={14068}
           initval={0}
-        />
-
-        <ShowcaseParalexCard
-          scroll={scrollVal}
-          trigerval={6950}
-          startval={7640}
-          endval={12940}
-          initval={6950}
         />
       </Box>
     </>
