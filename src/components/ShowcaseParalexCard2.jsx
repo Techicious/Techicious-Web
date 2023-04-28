@@ -4,7 +4,7 @@ import Title from "react-vanilla-tilt";
 // import vid from "../resources/mov_bbb.mp4";
 import img from "../Assets/client1.png";
 import { useEffect } from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 function ShowcaseParalexCards(props) {
@@ -30,7 +30,9 @@ function ShowcaseParalexCards(props) {
       r.style.setProperty("--scale", `${-scrollvalue / 3000 + 2.5}`);
       r.style.setProperty("--transition", `.1s linear`);
     }
+
     // paused state
+
     if (scrollvalue >= 4200) {
       r.style.setProperty("--transition", `1s linear`);
       r.style.setProperty("--scale", `${1.4}`);
@@ -47,8 +49,11 @@ function ShowcaseParalexCards(props) {
   var r = document.querySelector(":root");
 
   if (scrollvalue >= props.endvalDesktop && scrollvalue <= props.endval) {
-    const scrollvalueMobile = props.scroll - props.endvalDesktop;
-    console.log(scrollvalueMobile, "yaha aay");
+    const scrollvalueMobile = scrollvalue - props.endvalDesktop;
+    console.log("mobile", scrollvalueMobile);
+    console.log("destop ", props.endvalDesktop);
+    console.log("scroll ", props.scroll);
+    console.log("scrollval ", scrollvalue);
 
     if (scrollvalueMobile < 50) {
       r.style.setProperty("--imagescrolly", `${0}%`);
@@ -91,9 +96,8 @@ function ShowcaseParalexCards(props) {
       className="thisOne"
       id="fixed"
       style={{
-        gap: 40,
+        gap: 10,
         top: 0,
-
         left: 0,
         position: props.scroll > 900 ? "fixed" : "sticky",
         opacity: props.scroll > props.trigerval && "1",
@@ -104,13 +108,21 @@ function ShowcaseParalexCards(props) {
             ? "none"
             : "flex",
       }}
-      direction={{ lg: "row", md: "column", sm: "column", xs: "column" }}
+      direction={
+        props.reverse
+          ? { lg: "row-reverse", md: "column", sm: "column", xs: "column" }
+          : { lg: "row", md: "column", sm: "column", xs: "column" }
+      }
     >
-      <Box
-        width={"500px"}
-        height={{ lg: "400px", md: "0", sm: "0", xs: "0" }}
-        bg={"green"}
-      ></Box>
+      <Box width={"300px"} height={{ lg: "200px", md: "0", sm: "0", xs: "0" }}>
+        <Text fontSize={"xl"} fontWeight={"bold"}>
+          Lorem, ipsum
+        </Text>
+        <Text my={"1rem"}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga
+          esse non consectetur, nemo impedit enim mollitia qui quibusdam eum.
+        </Text>
+      </Box>
       <Flex
         justifyContent={"center"}
         transform={{
@@ -120,7 +132,7 @@ function ShowcaseParalexCards(props) {
           xs: "scale(.7)",
         }}
         alignItems={"center"}
-        w={"600px"}
+        w={"70%"}
         height={"600px"}
         overflow={"hidden"}
       >
@@ -130,7 +142,7 @@ function ShowcaseParalexCards(props) {
               width="100% !important"
               height="100% !important"
               overflow="hidden"
-              borderRadius="9px"
+              borderRadius="12px"
             >
               <div className="innerbox" id="inn">
                 <img id="myimage" src={img} />

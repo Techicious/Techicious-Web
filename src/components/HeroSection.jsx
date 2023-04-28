@@ -18,7 +18,7 @@ const Landinpage = () => {
       document.removeEventListener("scroll", () => {});
     };
   }, []);
-  console.log(scrollVal);
+  // console.log(scrollVal);
 
   return (
     <>
@@ -26,16 +26,37 @@ const Landinpage = () => {
         <Box className="landingpage">
           <SliderComp />
         </Box>
-
-        <ShowcaseParalexCards
-          scroll={scrollVal}
-          trigerval={181}
-          startval={800}
-          endvalDesktop={7640}
-          startvalMobile={800}
-          endval={14068}
-          initval={0}
-        />
+        {scrollVal < 14068 ? (
+          <ShowcaseParalexCards
+            reverse={false}
+            scroll={scrollVal}
+            trigerval={181}
+            startval={800}
+            endvalDesktop={7640}
+            endval={14068}
+            initval={0}
+          />
+        ) : (
+          <ShowcaseParalexCards
+            reverse={true}
+            scroll={scrollVal}
+            trigerval={14068}
+            startval={14068}
+            // endvalDesktop={20908}
+            endvalDesktop={7640}
+            endval={28000}
+            initval={14068}
+          />
+          // <ShowcaseParalexCards
+          //   scroll={scrollVal}
+          //   trigerval={181}
+          //   startval={800}
+          //   endvalDesktop={7640}
+          //   startvalMobile={800}
+          //   endval={14068}
+          //   initval={0}
+          // />
+        )}
       </Box>
     </>
   );
