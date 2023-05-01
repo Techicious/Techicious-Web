@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Techicious-Web/static/css/main.31e59ac4.css",
-    "main.js": "/Techicious-Web/static/js/main.1ddebb5a.js",
+    "main.js": "/Techicious-Web/static/js/main.53041a05.js",
     "static/media/client1.png": "/Techicious-Web/static/media/client1.533909c6f71e79beb164.png",
     "static/media/s1.jpg": "/Techicious-Web/static/media/s1.1fbeec18fe17785a885d.jpg",
     "static/media/talentfactory.png": "/Techicious-Web/static/media/talentfactory.6fa2507bc5bcb505571b.png",
@@ -33,10 +33,10 @@
     "static/media/slick.woff": "/Techicious-Web/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Techicious-Web/index.html",
     "main.31e59ac4.css.map": "/Techicious-Web/static/css/main.31e59ac4.css.map",
-    "main.1ddebb5a.js.map": "/Techicious-Web/static/js/main.1ddebb5a.js.map"
+    "main.53041a05.js.map": "/Techicious-Web/static/js/main.53041a05.js.map"
   },
   "entrypoints": [
     "static/css/main.31e59ac4.css",
-    "static/js/main.1ddebb5a.js"
+    "static/js/main.53041a05.js"
   ]
 }
