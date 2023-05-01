@@ -16,32 +16,20 @@ const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/Techicious-Web" element={<Homepage />} />
-        <Route exact path="/About_Us" element={<About />} />
-        <Route
-          exact
-          path="/Services/Design_Factory"
-          element={<DesignFactory />}
-        />
-        <Route
-          exact
-          path="/Services/Converter_Factory"
-          element={<ConvertorFactory />}
-        />
-        <Route exact path="/Services/Code_Factory" element={<CodeFactory />} />
-        <Route
-          exact
-          path="/Services/Talent_Factory"
-          element={<TalentFactory />}
-        />
-        <Route
-          exact
-          path="/Solutions/IOT_Solutions"
-          element={<IOTSolutions />}
-        />
-        <Route exact path="/Technology" element={<TechnologyPage />} />
-        <Route exact path="/Contact_Us" element={<ContactUs />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/Techicious-Web" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services">
+          <Route path="design-factory" element={<DesignFactory />} />
+          <Route path="converter-factory" element={<ConvertorFactory />} />
+          <Route path="code-factory" element={<CodeFactory />} />
+          <Route path="talent-factory" element={<TalentFactory />} />
+        </Route>
+        <Route path="/solutions">
+          <Route path="iot-solutions" element={<IOTSolutions />} />
+        </Route>
+        <Route path="/technology" element={<TechnologyPage />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </>
   );

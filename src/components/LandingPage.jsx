@@ -8,7 +8,7 @@ function LandingPage() {
       color={"#fff"}
       w={"100%"}
       height={"20rem"}
-      px={"2rem"}
+      px={"3rem"}
     >
       <Text fontSize={"lg"} my={"1rem"}>
         WELCOME,

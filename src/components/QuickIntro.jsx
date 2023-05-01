@@ -6,6 +6,7 @@ const Intro = () => {
     <Flex
       width={"100%"}
       my={"5rem"}
+      px={"3rem"}
       justifyContent={"center"}
       alignItems={"center"}
       direction={"column"}

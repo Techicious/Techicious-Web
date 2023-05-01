@@ -29,8 +29,9 @@ const FormatWrapper = ({ children }) => {
 
       <Box
         w={"100%"}
+        minH={"100vh"}
         overflow={"hidden"}
-        px={{ lg: "3rem", md: "3rem", sm: "3rem", xs: "1rem" }}
+        // px={{ lg: "3rem", md: "3rem", sm: "3rem", xs: "1rem" }}
       >
         {children}
       </Box>

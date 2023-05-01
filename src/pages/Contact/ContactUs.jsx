@@ -1,5 +1,6 @@
 import React from "react";
 import ContactForm from "../../components/ContactForm";
+import FormatWrapper from "..";
 
 const ContactUs = () => {
   window.scroll({
@@ -8,14 +9,16 @@ const ContactUs = () => {
     behavior: "smooth",
   });
   return (
-    <div className="mw">
-      <div className="contactpaged">
-        <div className="title">
-          <h1>Contact Us</h1>
+    <FormatWrapper>
+      <div className="mw">
+        <div className="contactpaged">
+          <div className="title">
+            <h1>Contact Us</h1>
+          </div>
+          <ContactForm />
         </div>
-        <ContactForm />
       </div>
-    </div>
+    </FormatWrapper>
   );
 };
 

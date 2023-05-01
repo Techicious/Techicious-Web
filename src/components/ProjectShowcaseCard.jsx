@@ -2,37 +2,48 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
+import image from "../Assets/s1.jpg";
 const sliderData = [
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
   {
     item: "ss",
+    imageURL: image,
   },
 ];
 
@@ -110,10 +121,11 @@ export default class SimpleSlider extends Component {
             return (
               <Box m={"2rem 1rem"} key={idx}>
                 <Box
-                  bg="rgb(253, 0, 0)"
                   className="Services_card"
                   justifyContent={"center"}
                   alignItems={"center"}
+                  backgroundImage={item.imageURL}
+                  backgroundSize={'cover'}
                   overflow="hidden"
                   my={"5rem"}
                   mx={"1rem"}

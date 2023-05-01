@@ -12,6 +12,7 @@ import Clientcomponent from "../../components/ShowcaseParalexCard";
 
 import { Flex, Text } from "@chakra-ui/react";
 import LandingPage from "../../components/LandingPage";
+import AutoSlider from "../../components/AutoSlider";
 
 const Homepage = () => {
   window.scroll({
@@ -43,6 +44,7 @@ const Homepage = () => {
         <Intro />
         <Flex
           minH={"100vh"}
+          px={"3rem"}
           direction={"column"}
           justifyContent={"center"}
           alignItems={"center"}
@@ -63,6 +65,7 @@ const Homepage = () => {
         <Flex
           minH={"100vh"}
           my={"3rem"}
+          px={"3rem"}
           direction={"column"}
           justifyContent={"center"}
           alignItems={"center"}
@@ -88,8 +91,8 @@ const Homepage = () => {
           </Flex>
         </Flex>
 
-        <Technology />
-
+        {/* <Technology /> */}
+        <AutoSlider />
         <Contactform />
       </FormatWrapper>
     </>

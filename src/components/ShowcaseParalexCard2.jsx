@@ -14,7 +14,7 @@ function ShowcaseParalexCards(props) {
   if (scrollvalue <= props.endvalDesktop) {
     if (scrollvalue < 900) {
       r.style.setProperty("--imagescrolly", `${0}%`);
-      r.style.setProperty("--scale", `${1}`);
+      // r.style.setProperty("--scale", `${1}`);
       r.style.setProperty("--scrollbarwidth", `10px`);
       r.style.setProperty("--transition", `.1s linear`);
     }
@@ -22,12 +22,12 @@ function ShowcaseParalexCards(props) {
       r.style.setProperty("--scrollbarwidth", `0px`);
       r.style.setProperty("--imagescrolly", `${-scrollvalue / 80 + 11}%`);
       r.style.setProperty("--transition", `.1s linear`);
-      r.style.setProperty("--scale", `${0.6 + scrollvalue / 2000}`);
+      // r.style.setProperty("--scale", `${0.6 + scrollvalue / 2000}`);
     }
     // paused state
 
     if (scrollvalue >= 2230) {
-      r.style.setProperty("--scale", `${-scrollvalue / 3000 + 2.5}`);
+      // r.style.setProperty("--scale", `${-scrollvalue / 3000 + 2.5}`);
       r.style.setProperty("--transition", `.1s linear`);
     }
 
@@ -35,11 +35,11 @@ function ShowcaseParalexCards(props) {
 
     if (scrollvalue >= 4200) {
       r.style.setProperty("--transition", `1s linear`);
-      r.style.setProperty("--scale", `${1.4}`);
+      // r.style.setProperty("--scale", `${1.4}`);
     }
     if (scrollvalue >= 4200 && scrollvalue <= 5400) {
       r.style.setProperty("--transition", `.3s linear`);
-      r.style.setProperty("--scale", `${1.4}`);
+      // r.style.setProperty("--scale", `${1.4}`);
     }
     if (scrollvalue >= 6650) {
       r.style.setProperty("--scrollbarwidth", `10px`);
@@ -57,7 +57,7 @@ function ShowcaseParalexCards(props) {
 
     if (scrollvalueMobile < 50) {
       r.style.setProperty("--imagescrolly", `${0}%`);
-      r.style.setProperty("--scale", `${1}`);
+      // r.style.setProperty("--scale", `${1}`);
       r.style.setProperty("--scrollbarwidth", `10px`);
       r.style.setProperty("--transition", `1s linear`);
     }
@@ -65,22 +65,22 @@ function ShowcaseParalexCards(props) {
       r.style.setProperty("--scrollbarwidth", `0px`);
       r.style.setProperty("--imagescrolly", `${0 + -scrollvalueMobile / 120}%`);
       r.style.setProperty("--transition", `.1s linear`);
-      r.style.setProperty("--scale", `${1 + scrollvalueMobile / 2000}`);
+      // r.style.setProperty("--scale", `${1 + scrollvalueMobile / 2000}`);
     }
     // paused state
 
     if (scrollvalueMobile >= 2230) {
-      r.style.setProperty("--scale", `${-scrollvalueMobile / 3000 + 2.5}`);
+      // r.style.setProperty("--scale", `${-scrollvalueMobile / 3000 + 2.5}`);
       r.style.setProperty("--transition", `.1s linear`);
     }
     // paused state
     if (scrollvalueMobile >= 4200) {
       r.style.setProperty("--transition", `1s linear`);
-      r.style.setProperty("--scale", `${1.4}`);
+      // r.style.setProperty("--scale", `${1.4}`);
     }
     if (scrollvalueMobile >= 4200 && scrollvalueMobile <= 5400) {
       r.style.setProperty("--transition", `.3s linear`);
-      r.style.setProperty("--scale", `${1.4}`);
+      // r.style.setProperty("--scale", `${1.4}`);
     }
     if (scrollvalueMobile >= 6650) {
       r.style.setProperty("--scrollbarwidth", `10px`);
@@ -114,7 +114,12 @@ function ShowcaseParalexCards(props) {
           : { lg: "row", md: "column", sm: "column", xs: "column" }
       }
     >
-      <Box width={"300px"} height={{ lg: "200px", md: "0", sm: "0", xs: "0" }}>
+      <Box
+        my={".5rem"}
+        width={{ lg: "30%", md: "100%", sm: "100%", xs: "100%" }}
+        // height={{ lg: "200px", md: "200px", sm: "200px", xs: "200px" }}
+        // overflow={"hidden"}
+      >
         <Text fontSize={"xl"} fontWeight={"bold"}>
           Lorem, ipsum
         </Text>
@@ -124,31 +129,41 @@ function ShowcaseParalexCards(props) {
         </Text>
       </Box>
       <Flex
+        w={{ lg: "900px", md: "100%", sm: "1000px", xs: "1000px" }}
         justifyContent={"center"}
+        overflow={"hidden"}
+        position={"relative"}
         transform={{
           lg: "scale(1)",
           md: "scale(1)",
-          sm: "scale(.9)",
-          xs: "scale(.7)",
+          sm: "scale(1)",
+          xs: "scale(1)",
         }}
         alignItems={"center"}
-        w={"70%"}
-        height={"600px"}
-        overflow={"hidden"}
+        height={"100%"}
       >
         {scrollvalue <= props.endvalDesktop ? (
-          <Title className="titlehover" loop>
-            <Box
-              width="100% !important"
-              height="100% !important"
-              overflow="hidden"
-              borderRadius="12px"
-            >
-              <div className="innerbox" id="inn">
-                <img id="myimage" src={img} />
-              </div>
-            </Box>
-          </Title>
+          <Box
+            transform={{
+              lg: "scale(1.2)",
+              md: "scale(1)",
+              sm: "scale(.8)",
+              xs: "scale(.58)",
+            }}
+          >
+            <Title className="titlehover" loop>
+              <Box
+                width="100% !important"
+                height="100% !important"
+                overflow="hidden"
+                borderRadius="12px"
+              >
+                <div className="innerbox" id="inn">
+                  <img id="myimage" src={img} />
+                </div>
+              </Box>
+            </Title>
+          </Box>
         ) : (
           <motion.div
             initial={{ x: 250 }}
@@ -158,19 +173,28 @@ function ShowcaseParalexCards(props) {
               stiffness: 120,
             }}
           >
-            <Title className="titlehover2" loop>
-              <Box
-                width="100% !important"
-                height="100% !important"
-                overflow="hidden"
-                ml={"4px"}
-                borderRadius="10px"
-              >
-                <div className="innerbox" id="inn">
-                  <img id="myimage" src={img} />
-                </div>
-              </Box>
-            </Title>
+            <Box
+              transform={{
+                lg: "scale(1.2)",
+                md: "scale(.9)",
+                sm: "scale(.9)",
+                xs: "scale(.9)",
+              }}
+            >
+              <Title className="titlehover2" loop>
+                <Box
+                  width="100% !important"
+                  height="100% !important"
+                  overflow="hidden"
+                  ml={"4px"}
+                  borderRadius="10px"
+                >
+                  <div className="innerbox" id="inn">
+                    <img id="myimage" src={img} />
+                  </div>
+                </Box>
+              </Title>
+            </Box>
           </motion.div>
         )}
       </Flex>

@@ -3,30 +3,54 @@ import React, { useEffect, useState } from "react";
 import img1 from "../../Assets/logo.png";
 import { AiFillCaretUp } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
   const [subMenu2, setSubMenu2] = useState(false);
+  const navigate = useNavigate();
 
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos > 1000) {
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.transform = "translateY(0px)";
+      } else {
+        document.getElementById("navbar").style.transform =
+          "translateY(-200px)";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  };
+
+  const navigateToPage = (to) => {
+    navigate("/" + to);
+  };
   return (
     <>
       <Flex
+        top={0}
+        transition={".3s"}
+        id="navbar"
         direction={"column"}
         position={"fixed"}
-        top={0}
         zIndex={"999999"}
         left={0}
         w={"100%"}
         color={"#fff"}
-        bg={"dark.bgcolor"}
+        bg={"#0e1012ad"}
+        backdropFilter={"blur(10px)"}
       >
         <Flex
-          bg={"dark.bgcolor"}
+          bg={"#0e101289"}
+          backdropFilter={"blur(4px)"}
           color={"#fff"}
           zIndex={"9999999"}
           justifyContent={"space-between"}
-          p={"1rem"}
+          p={".2rem"}
           px={"3rem"}
           alignItems={"center"}
           w={"100%"}
@@ -44,11 +68,25 @@ const Header = () => {
             alignItems={"center"}
           >
             <Flex direction={"column"} className="parentMenu">
-              <Text fontSize={"sm"}>Home</Text>
+              <Text
+                fontSize={"sm"}
+                onClick={() => {
+                  navigateToPage("");
+                }}
+              >
+                Home
+              </Text>
             </Flex>
             {/* about */}
             <Flex direction={"column"} className="parentMenu">
-              <Text fontSize={"sm"}>About us</Text>
+              <Text
+                fontSize={"sm"}
+                onClick={() => {
+                  navigateToPage("about");
+                }}
+              >
+                About us
+              </Text>
             </Flex>
             {/* services */}
 
@@ -103,6 +141,9 @@ const Header = () => {
                     bg="#0e1012"
                     fontSize={"sm"}
                     fontWeight={"bold"}
+                    onClick={() => {
+                      navigateToPage("services/design-factory");
+                    }}
                   >
                     Design Factory
                   </Text>
@@ -115,6 +156,9 @@ const Header = () => {
                     bg="#0e1012"
                     fontSize={"sm"}
                     fontWeight={"bold"}
+                    onClick={() => {
+                      navigateToPage("services/converter-factory");
+                    }}
                   >
                     Converter Factory
                   </Text>
@@ -127,6 +171,9 @@ const Header = () => {
                     bg="#0e1012"
                     fontSize={"sm"}
                     fontWeight={"bold"}
+                    onClick={() => {
+                      navigateToPage("services/code-factory");
+                    }}
                   >
                     Code Factory
                   </Text>
@@ -139,6 +186,9 @@ const Header = () => {
                     bg="#0e1012"
                     fontSize={"sm"}
                     fontWeight={"bold"}
+                    onClick={() => {
+                      navigateToPage("services/talent-factory");
+                    }}
                   >
                     Tallent Factory
                   </Text>
@@ -197,6 +247,9 @@ const Header = () => {
                     bg="#0e1012"
                     fontSize={"sm"}
                     fontWeight={"bold"}
+                    onClick={() => {
+                      navigateToPage("solutions/iot-solutions");
+                    }}
                   >
                     IOT Solution
                   </Text>
@@ -205,11 +258,25 @@ const Header = () => {
             </Flex>
 
             <Flex direction={"column"} className="parentMenu">
-              <Text fontSize={"sm"}>Technology</Text>
+              <Text
+                fontSize={"sm"}
+                onClick={() => {
+                  navigateToPage("technology");
+                }}
+              >
+                Technology
+              </Text>
             </Flex>
 
             <Flex direction={"column"} className="parentMenu">
-              <Text fontSize={"sm"}>Contact Us</Text>
+              <Text
+                fontSize={"sm"}
+                onClick={() => {
+                  navigateToPage("contact");
+                }}
+              >
+                Contact Us
+              </Text>
             </Flex>
           </Flex>
 
