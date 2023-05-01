@@ -15,15 +15,18 @@ const Header = () => {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if (currentScrollPos > 1000) {
+    if (currentScrollPos > 1000 && currentScrollPos < 28000) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.transform = "translateY(0px)";
       } else {
         document.getElementById("navbar").style.transform =
           "translateY(-200px)";
       }
-      prevScrollpos = currentScrollPos;
+    } else {
+      document.getElementById("navbar").style.transform = "translateY(0px)";
     }
+    console.log(currentScrollPos, "crpos");
+    prevScrollpos = currentScrollPos;
   };
 
   const navigateToPage = (to) => {
