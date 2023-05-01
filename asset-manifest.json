@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/Techicious-Web/static/css/main.f9cf1565.css",
-    "main.js": "/Techicious-Web/static/js/main.7eb2df33.js",
+    "main.css": "/Techicious-Web/static/css/main.31e59ac4.css",
+    "main.js": "/Techicious-Web/static/js/main.1ddebb5a.js",
     "static/media/client1.png": "/Techicious-Web/static/media/client1.533909c6f71e79beb164.png",
+    "static/media/s1.jpg": "/Techicious-Web/static/media/s1.1fbeec18fe17785a885d.jpg",
     "static/media/talentfactory.png": "/Techicious-Web/static/media/talentfactory.6fa2507bc5bcb505571b.png",
     "static/media/converterfactory.png": "/Techicious-Web/static/media/converterfactory.f76d99d85813df7e544f.png",
     "static/media/technology.png": "/Techicious-Web/static/media/technology.b590ebec197352af36be.png",
     "static/media/iot.png": "/Techicious-Web/static/media/iot.b8fdaf1dbd2651b81ba6.png",
     "static/media/contact.png": "/Techicious-Web/static/media/contact.345fadb88f641e94cc05.png",
+    "static/media/slider1.jpg": "/Techicious-Web/static/media/slider1.71a96e88470bbed627e5.jpg",
     "static/media/devops.png": "/Techicious-Web/static/media/devops.2bd546553a07929bdfab.png",
     "static/media/lr.png": "/Techicious-Web/static/media/lr.1900100f4b60ab9950dc.png",
     "static/media/codefactory.png": "/Techicious-Web/static/media/codefactory.c21df0884d58336e569e.png",
@@ -30,11 +32,11 @@
     "static/media/slick.ttf": "/Techicious-Web/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Techicious-Web/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Techicious-Web/index.html",
-    "main.f9cf1565.css.map": "/Techicious-Web/static/css/main.f9cf1565.css.map",
-    "main.7eb2df33.js.map": "/Techicious-Web/static/js/main.7eb2df33.js.map"
+    "main.31e59ac4.css.map": "/Techicious-Web/static/css/main.31e59ac4.css.map",
+    "main.1ddebb5a.js.map": "/Techicious-Web/static/js/main.1ddebb5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9cf1565.css",
-    "static/js/main.7eb2df33.js"
+    "static/css/main.31e59ac4.css",
+    "static/js/main.1ddebb5a.js"
   ]
 }
