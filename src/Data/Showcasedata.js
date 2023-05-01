@@ -2,19 +2,19 @@ const sdata = [
   {
     id: 1,
     title: "DESIGN FACTORY",
-    link: "Design_Factory",
+    link: "/services/design-factory",
     icon: "design",
   },
   {
     id: 2,
     title: "CONVERTOR FACTORY",
-    link: "Converter_Factory",
+    link: "/services/converter-factory",
     icon: "converter",
   },
   {
     id: 3,
-    title: "CODE      FACTORY",
-    link: "Code_Factory",
+    title: "CODE FACTORY",
+    link: "/services/code-factory",
     icon: "code",
   },
 ];

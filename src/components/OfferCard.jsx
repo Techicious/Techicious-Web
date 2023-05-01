@@ -35,7 +35,7 @@ const Showcase_Card = (props) => {
         {props.title}
       </Text>
 
-      <CustomButton value="Read More" />
+      <CustomButton link={props.link} value="Read More" />
     </Flex>
   );
 };

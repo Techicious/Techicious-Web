@@ -1,10 +1,19 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const CustomButton = (props) => {
+  const navigate = useNavigate();
+
+  const navigateToPage = (to) => {
+    navigate("/" + to);
+  };
   return (
     <Flex
+      onClick={() => {
+        props.link ? navigateToPage(props.link) : console.log("");
+      }}
       width={"10rem"}
       position={"relative"}
       className="btnHoverEffect"
@@ -19,7 +28,6 @@ const CustomButton = (props) => {
         transition={".4s"}
         color={"#fff"}
         className="effect"
-        
         _hover={{ pr: "8rem" }}
       >
         <BsArrowRightShort />

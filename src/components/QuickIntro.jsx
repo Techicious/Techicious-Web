@@ -25,7 +25,7 @@ const Intro = () => {
           reality.
         </Text>
 
-        <CustomButton value="Read More" />
+        <CustomButton link={"about"} value="Read More" />
       </Box>
     </Flex>
   );

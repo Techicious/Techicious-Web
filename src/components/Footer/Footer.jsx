@@ -2,14 +2,25 @@ import React from "react";
 import img2 from "../../Assets/logo2.png";
 import { Box, Flex, Link, Text } from "@chakra-ui/react";
 import { IoIosCall, IoIosMail, IoIosMap } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const navigateToPage = (to) => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    navigate("/" + to);
+  };
   return (
     <>
       <Flex
         justifyContent={"space-between"}
         w={"100%"}
-        overflow={'hidden'}
+        overflow={"hidden"}
         p={"2rem"}
         flexWrap={"wrap"}
         alignItems={"center"}
@@ -21,27 +32,51 @@ const Footer = () => {
 
           <Link to="/About_Us">
             {" "}
-            <Text fontSize={"md"} my={"1rem"}>
+            <Text
+              fontSize={"md"}
+              onClick={() => {
+                navigateToPage("about");
+              }}
+              my={"1rem"}
+            >
               About Us
             </Text>
           </Link>
 
           <Link to="/Solutions/IOT_Solutions">
             {" "}
-            <Text fontSize={"md"} my={"1rem"}>
+            <Text
+              fontSize={"md"}
+              onClick={() => {
+                navigateToPage("solutions/iot-solutions");
+              }}
+              my={"1rem"}
+            >
               Solution
             </Text>
           </Link>
 
           <Link to="/Technology">
             {" "}
-            <Text fontSize={"md"} my={"1rem"}>
+            <Text
+              fontSize={"md"}
+              onClick={() => {
+                navigateToPage("technology");
+              }}
+              my={"1rem"}
+            >
               Technology
             </Text>
           </Link>
 
           <Link to="/Contact_Us">
-            <Text fontSize={"md"} my={"1rem"}>
+            <Text
+              fontSize={"md"}
+              onClick={() => {
+                navigateToPage("contact");
+              }}
+              my={"1rem"}
+            >
               {" "}
               Contact Us
             </Text>
@@ -49,11 +84,18 @@ const Footer = () => {
         </Box>
 
         <Flex alignItems={"center"} direction={"column"} gap={"2rem"}>
-          <img width="240px" src={img2} alt="logo" />
+          <img
+            width="240px"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigateToPage("");
+            }}
+            src={img2}
+            alt="logo"
+          />
           <Text color={"#fff"}>Copyright @ Techicious 2022</Text>
         </Flex>
         <Flex
-         
           alignItems={"flex-start"}
           color={"#fff"}
           direction={"column"}

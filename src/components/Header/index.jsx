@@ -30,6 +30,11 @@ const Header = () => {
   };
 
   const navigateToPage = (to) => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     navigate("/" + to);
   };
   return (
@@ -58,9 +63,16 @@ const Header = () => {
           alignItems={"center"}
           w={"100%"}
         >
-          <Link to="/">
-            <img width="200px" src={img1} alt="" />
-          </Link>
+          <img
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigateToPage("");
+            }}
+            width="200px"
+            src={img1}
+            alt=""
+          />
+
           {/* desktop */}
           {/* home */}
           <Flex
