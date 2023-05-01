@@ -67,7 +67,7 @@ html {
     stroke-width: 0;
   }
 }
-s .btnHoverEffect:hover .effect {
+.btnHoverEffect:hover .effect {
   padding-right: 8rem;
   color: #ffffff;
 }

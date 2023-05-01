@@ -19,6 +19,7 @@ const CustomButton = (props) => {
         transition={".4s"}
         color={"#fff"}
         className="effect"
+        
         _hover={{ pr: "8rem" }}
       >
         <BsArrowRightShort />
