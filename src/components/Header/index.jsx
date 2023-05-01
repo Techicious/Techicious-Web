@@ -25,7 +25,7 @@ const Header = () => {
     } else {
       document.getElementById("navbar").style.transform = "translateY(0px)";
     }
-    console.log(currentScrollPos, "crpos");
+
     prevScrollpos = currentScrollPos;
   };
 
@@ -291,6 +291,7 @@ const Header = () => {
             alignItems={"flex-end"}
           >
             <Text
+              cursor={"pointer"}
               onClick={() => {
                 setMenuToggle(!menuToggle);
               }}
@@ -315,11 +316,25 @@ const Header = () => {
           alignItems={"center"}
         >
           <Flex direction={"column"} cursor={"pointer"}>
-            <Text fontSize={"sm"}>Home</Text>
+            <Text
+              fontSize={"sm"}
+              onClick={() => {
+                navigateToPage("");
+              }}
+            >
+              Home
+            </Text>
           </Flex>
           {/* about */}
           <Flex direction={"column"} cursor={"pointer"}>
-            <Text fontSize={"sm"}>About us</Text>
+            <Text
+              fontSize={"sm"}
+              onClick={() => {
+                navigateToPage("about");
+              }}
+            >
+              About us
+            </Text>
           </Flex>
           {/* services */}
 
@@ -365,9 +380,13 @@ const Header = () => {
                   _hover={{ transform: "scale(1.1)" }}
                   p={".5rem 1rem"}
                   rounded={"md"}
+                  cursor={"pointer"}
                   bg="#0e1012"
                   fontSize={"sm"}
                   fontWeight={"bold"}
+                  onClick={() => {
+                    navigateToPage("services/design-factory");
+                  }}
                 >
                   Design Factory
                 </Text>
@@ -377,9 +396,13 @@ const Header = () => {
                   _hover={{ transform: "scale(1.1)" }}
                   p={".5rem 1rem"}
                   rounded={"md"}
+                  cursor={"pointer"}
                   bg="#0e1012"
                   fontSize={"sm"}
                   fontWeight={"bold"}
+                  onClick={() => {
+                    navigateToPage("services/converter-factory");
+                  }}
                 >
                   Converter Factory
                 </Text>
@@ -389,9 +412,13 @@ const Header = () => {
                   _hover={{ transform: "scale(1.1)" }}
                   p={".5rem 1rem"}
                   rounded={"md"}
+                  cursor={"pointer"}
                   bg="#0e1012"
                   fontSize={"sm"}
                   fontWeight={"bold"}
+                  onClick={() => {
+                    navigateToPage("services/code-factory");
+                  }}
                 >
                   Code Factory
                 </Text>
@@ -403,7 +430,11 @@ const Header = () => {
                   rounded={"md"}
                   bg="#0e1012"
                   fontSize={"sm"}
+                  cursor={"pointer"}
                   fontWeight={"bold"}
+                  onClick={() => {
+                    navigateToPage("services/talent-factory");
+                  }}
                 >
                   Tallent Factory
                 </Text>
@@ -455,7 +486,11 @@ const Header = () => {
                   rounded={"md"}
                   bg="#0e1012"
                   fontSize={"sm"}
+                  cursor={"pointer"}
                   fontWeight={"bold"}
+                  onClick={() => {
+                    navigateToPage("solutions/iot-solutions");
+                  }}
                 >
                   IOT Solution
                 </Text>
@@ -464,11 +499,25 @@ const Header = () => {
           </Flex>
 
           <Flex direction={"column"} className="parentMenu">
-            <Text fontSize={"sm"}>Technology</Text>
+            <Text
+              fontSize={"sm"}
+              onClick={() => {
+                navigateToPage("technology");
+              }}
+            >
+              Technology
+            </Text>
           </Flex>
 
           <Flex direction={"column"} className="parentMenu">
-            <Text fontSize={"sm"}>Contact Us</Text>
+            <Text
+              fontSize={"sm"}
+              onClick={() => {
+                navigateToPage("contact");
+              }}
+            >
+              Contact Us
+            </Text>
           </Flex>
         </Flex>
       </Flex>

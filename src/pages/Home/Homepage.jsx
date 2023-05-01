@@ -10,9 +10,10 @@ import ShowcaseCard from "../../components/OfferCard";
 import FormatWrapper from "..";
 import Clientcomponent from "../../components/ShowcaseParalexCard";
 
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import LandingPage from "../../components/LandingPage";
 import AutoSlider from "../../components/AutoSlider";
+import ProjectShowcaseCard from "../../components/HeroSection";
 
 const Homepage = () => {
   window.scroll({
@@ -40,7 +41,9 @@ const Homepage = () => {
       <div id="parl"></div>
       <FormatWrapper>
         <LandingPage />
-        <Landinpage />
+        <ProjectShowcaseCard />
+
+        <Box id="quickIntro" w={"100%"} height={"10vh"}></Box>
         <Intro />
         <Flex
           minH={"100vh"}
@@ -61,7 +64,6 @@ const Homepage = () => {
             {Sdata2.map(Ncard2)}
           </Flex>
         </Flex>
-
         <Flex
           minH={"100vh"}
           my={"3rem"}
@@ -90,7 +92,6 @@ const Homepage = () => {
             {Sdata.map(Ncard)}
           </Flex>
         </Flex>
-
         {/* <Technology /> */}
         <AutoSlider />
         <Contactform />

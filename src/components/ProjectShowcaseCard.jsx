@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import image from "../Assets/s1.jpg";
 const sliderData = [
   {
@@ -125,7 +125,7 @@ export default class SimpleSlider extends Component {
                   justifyContent={"center"}
                   alignItems={"center"}
                   backgroundImage={item.imageURL}
-                  backgroundSize={'cover'}
+                  backgroundSize={"cover"}
                   overflow="hidden"
                   my={"5rem"}
                   mx={"1rem"}

@@ -30,6 +30,7 @@ const CustomButton = (props) => {
         position={"absolute"}
         top={"50%"}
         left={0}
+        mx={"1rem"}
         transform={"translate(50%,-50%)"}
       >
         {props.value}

@@ -6,8 +6,13 @@ import img from "../Assets/client1.png";
 import { useEffect } from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function ShowcaseParalexCards(props) {
+  var ele = document.getElementById("quickIntro");
+  const scrollTo = () => {
+    window.scrollTo(ele.offsetLeft, ele.offsetTop);
+  };
   var r = document.querySelector(":root");
 
   const scrollvalue = props.scroll - props.initval;
@@ -92,102 +97,91 @@ function ShowcaseParalexCards(props) {
   }, [props.scroll, props.startval]);
 
   return (
-    <Flex
-      className="thisOne"
-      id="fixed"
-      style={{
-        gap: 10,
-        top: 0,
-        left: 0,
-        position: props.scroll > 900 ? "fixed" : "sticky",
-        opacity: props.scroll > props.trigerval && "1",
-        display:
-          props.scroll < props.trigerval
-            ? "none"
-            : props.scroll > props.endval
-            ? "none"
-            : "flex",
-      }}
-      direction={
-        props.reverse
-          ? { lg: "row-reverse", md: "column", sm: "column", xs: "column" }
-          : { lg: "row", md: "column", sm: "column", xs: "column" }
-      }
-    >
-      <Box
-        my={".5rem"}
-        width={{ lg: "30%", md: "100%", sm: "100%", xs: "100%" }}
-        // height={{ lg: "200px", md: "200px", sm: "200px", xs: "200px" }}
-        // overflow={"hidden"}
-      >
-        <Text fontSize={"xl"} fontWeight={"bold"}>
-          Lorem, ipsum
-        </Text>
-        <Text my={"1rem"}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga
-          esse non consectetur, nemo impedit enim mollitia qui quibusdam eum.
-        </Text>
-      </Box>
+    <>
       <Flex
-        w={{ lg: "900px", md: "100%", sm: "1000px", xs: "1000px" }}
-        justifyContent={"center"}
-        overflow={"hidden"}
-        position={"relative"}
-        transform={{
-          lg: "scale(1)",
-          md: "scale(1)",
-          sm: "scale(1)",
-          xs: "scale(1)",
+        className="thisOne"
+        id="fixed"
+        style={{
+          gap: 10,
+          top: 0,
+          left: 0,
+          position: props.scroll > 900 ? "fixed" : "sticky",
+          opacity: props.scroll > props.trigerval && "1",
+          display:
+            props.scroll < props.trigerval
+              ? "none"
+              : props.scroll > props.endval
+              ? "none"
+              : "flex",
         }}
-        alignItems={"center"}
-        height={"100%"}
+        direction={
+          props.reverse
+            ? { lg: "row-reverse", md: "column", sm: "column", xs: "column" }
+            : { lg: "row", md: "column", sm: "column", xs: "column" }
+        }
       >
-        {scrollvalue <= props.endvalDesktop ? (
-          <Box
-            transform={{
-              lg: "scale(1.2)",
-              md: "scale(1)",
-              sm: "scale(.8)",
-              xs: "scale(.58)",
-            }}
-          >
-            <Title className="titlehover" loop>
-              <Box
-                width="100% !important"
-                height="100% !important"
-                overflow="hidden"
-                borderRadius="12px"
-              >
-                <div className="innerbox" id="inn">
-                  <img id="myimage" src={img} />
-                </div>
-              </Box>
-            </Title>
-          </Box>
-        ) : (
-          <motion.div
-            initial={{ x: 250 }}
-            animate={{ x: 10 }}
-            transition={{
-              type: "spring",
-              stiffness: 120,
-            }}
-          >
+        <Flex
+          position={"absolute"}
+          w={"100px"}
+          h={"40px"}
+          bg={"dark.blue"}
+          bottom={"10px"}
+          zIndex={"888888888"}
+          rounded={"2xl"}
+          cursor={"pointer"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          onClick={() => {
+            scrollTo();
+          }}
+          right={"10px"}
+        >
+          {" "}
+          <Text>skip</Text>
+        </Flex>
+        <Box
+          my={".5rem"}
+          width={{ lg: "30%", md: "100%", sm: "100%", xs: "100%" }}
+          // height={{ lg: "200px", md: "200px", sm: "200px", xs: "200px" }}
+          // overflow={"hidden"}
+        >
+          <Text fontSize={"xl"} fontWeight={"bold"}>
+            Lorem, ipsum
+          </Text>
+          <Text my={"1rem"}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga
+            esse non consectetur, nemo impedit enim mollitia qui quibusdam eum.
+          </Text>
+        </Box>
+        <Flex
+          w={{ lg: "900px", md: "100%", sm: "1000px", xs: "1000px" }}
+          justifyContent={"center"}
+          overflow={"hidden"}
+          position={"relative"}
+          transform={{
+            lg: "scale(1)",
+            md: "scale(1)",
+            sm: "scale(1)",
+            xs: "scale(1)",
+          }}
+          alignItems={"center"}
+          height={"100%"}
+        >
+          {scrollvalue <= props.endvalDesktop ? (
             <Box
               transform={{
                 lg: "scale(1.2)",
-                md: "scale(.9)",
-                sm: "scale(.9)",
-                xs: "scale(.9)",
+                md: "scale(1)",
+                sm: "scale(.8)",
+                xs: "scale(.58)",
               }}
             >
-              <Title className="titlehover2" loop>
+              <Title className="titlehover" loop>
                 <Box
                   width="100% !important"
                   height="100% !important"
                   overflow="hidden"
-                  ml={"4px"}
-                  borderRadius="10px"
+                  borderRadius="12px"
                 >
                   <div className="innerbox" id="inn">
                     <img id="myimage" src={img} />
@@ -195,12 +189,42 @@ function ShowcaseParalexCards(props) {
                 </Box>
               </Title>
             </Box>
-          </motion.div>
-        )}
+          ) : (
+            <motion.div
+              initial={{ x: 250 }}
+              animate={{ x: 10 }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+              }}
+            >
+              <Box
+                transform={{
+                  lg: "scale(1.2)",
+                  md: "scale(.9)",
+                  sm: "scale(.9)",
+                  xs: "scale(.9)",
+                }}
+              >
+                <Title className="titlehover2" loop>
+                  <Box
+                    width="100% !important"
+                    height="100% !important"
+                    overflow="hidden"
+                    ml={"4px"}
+                    borderRadius="10px"
+                  >
+                    <div className="innerbox" id="inn">
+                      <img id="myimage" src={img} />
+                    </div>
+                  </Box>
+                </Title>
+              </Box>
+            </motion.div>
+          )}
+        </Flex>
       </Flex>
-
-      {/*  */}
-    </Flex>
+    </>
   );
 }
 
